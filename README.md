@@ -3,7 +3,6 @@
 - config.ini
 ```
 [module/cmus]
-[module/cmus]
 type = custom/script
 exec = ~/.config/polybar/cmus.sh
 exec-if = pgrep -x cmus
