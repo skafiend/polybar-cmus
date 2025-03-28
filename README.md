@@ -1,4 +1,4 @@
-# polybar-cmus
+![preview](https://github.com/skafiend/polybar-cmus/blob/main/preview.png)
 
 - config.ini
 ```
