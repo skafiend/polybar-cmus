@@ -14,7 +14,7 @@ DUR_SEC=$(( $DUR % 60 ))
 POS=$(cmus-remote -C status | grep "position" | cut -f 2 -d ' ')
 POS_MIN=$(( $POS / 60 ))
 POS_SEC=$(( $POS % 60 ))
-DELIM="%%{F$PRIMARY_COLOR}/%%{F-}"
+DELIM="%%{F#f00}/%%{F-}"
 
 TIME=$(printf "%02d:%02d %s %02d:%02d" $POS_MIN $POS_SEC $DELIM $DUR_MIN $DUR_SEC)
 
@@ -25,8 +25,8 @@ LABEL="$ARTIST - $TITLE"
 
 if [ ${#LABEL} -gt 55 ]; then
     printf '%.55s' "$LABEL"
-    printf "...%%{F#fff} $TIME %%{F$PRIMARY_COLOR}|"
+    printf "...%%{F#fff} $TIME %%{F#f00}|"
 else
     printf "$LABEL"
-    printf "%%{F#fff} $TIME %%{F$PRIMARY_COLOR}|"
+    printf "%%{F#fff} $TIME %%{F#f00}|"
 fi
