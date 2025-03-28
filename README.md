@@ -3,10 +3,14 @@
 - config.ini
 ```
 [module/cmus]
+[module/cmus]
 type = custom/script
 exec = ~/.config/polybar/cmus.sh
 exec-if = pgrep -x cmus
 interval = 1
 tail = true
-label-foreground = ${colors.primary}
+click-left = cmus-remote --pause
+click-right = pkill -f cmus
+scroll-up = cmus-remote --volume +5%
+scroll-down = cmus-remote --volume -5%
 ```
